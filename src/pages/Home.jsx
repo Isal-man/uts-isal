@@ -189,7 +189,7 @@ export default function Home() {
             <option value="desc">Turun</option>
           </select>
         </section>
-        <Button style={{ display: "flex", alignItems: "center" }} onClick={() => setShowCart(true)}>
+        <Button style={{ display: "flex", alignItems: "center" }} onClick={() => cart.length > 0 ? setShowCart(true) : alert("Keranjang masih kosong!")}>
           <BsFillCartFill size={20} /> <p>{cart.reduce((a, p) => a + p.count, 0)}</p>
         </Button>
       </header>
