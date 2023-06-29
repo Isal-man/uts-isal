@@ -421,6 +421,7 @@ export default function Home() {
             </tbody>
           </table>
           <p>Jumlah yang harus dibayarkan: {cart.reduce((a, p) => a + p.price, 0).toLocaleString("id-ID", {style: "currency", currency: "IDR"})}</p>
+          <Button onClick={() => setShowCart(false)}>Tutup</Button>
         </div>
       )}
     </div>

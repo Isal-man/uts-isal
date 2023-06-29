@@ -90,7 +90,7 @@ export default function Product({
               variant="tonal"
               style={{ height: 32, width: 32 }}
               onClick={() =>
-                setProducts(products.filter((product) => product.id !== id))
+                confirm(`Apakah anda ingin menghapus produk ${name}`) && setProducts(products.filter((product) => product.id !== id))
               }
               title="Hapus"
             >
